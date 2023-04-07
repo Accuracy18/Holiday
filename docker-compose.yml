@@ -11,9 +11,9 @@ services:
         environment:
             - DISPLAY::0
 
-   #     devices:
- #           - /dev/video0:/dev/video0
-  #          - /dev/video1:/dev/video1
+        devices:
+            - /dev/video0:/dev/video0
+            - /dev/video1:/dev/video1
             
         volumes:
             - ./hand_control:/root/hand_control
