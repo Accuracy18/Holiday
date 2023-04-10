@@ -1,6 +1,5 @@
 import cv2
 
-
 class FrameStuff(object):
     cam = cv2.VideoCapture('/dev/video0')
     print(cam.isOpened())
@@ -13,8 +12,7 @@ class FrameStuff(object):
     def update(self):
         while self.cam.isOpened():
             _ret, frame = self.cam.read()
-            print(frame)
-            
+            print(frame)            
             cv2.imshow("Main Frame", frame)
         
 FrameStuff().update()

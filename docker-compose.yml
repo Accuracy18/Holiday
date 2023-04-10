@@ -1,15 +1,14 @@
 services:
     main_brainz:
-        image: gtdonny18/main_brainz:latest
+        build: ./hand_control/
+        image: main_brainz:latest
         container_name: main_brainz_container
+        
         tty: true
-    
         restart: "always"
 
-#        user: '1000:1000'
-
         environment:
-            - DISPLAY::0
+            - DISPLAY=:0
 
         devices:
             - /dev/video0:/dev/video0
@@ -17,10 +16,12 @@ services:
             
         volumes:
             - ./hand_control:/root/hand_control
+
+        network_mode: host
             
         working_dir: /root/hand_control
 
-        
+    
         
 networks:
     that_network:
