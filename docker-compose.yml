@@ -17,8 +17,11 @@ services:
         volumes:
             - ./hand_control:/root/hand_control
 
-        network_mode: host
-            
+        #networks:
+        #    that_network:
+        #        ipv4_address: 192.168.20.2
+
+        network_mode: host   
         working_dir: /root/hand_control
 
     

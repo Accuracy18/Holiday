@@ -11,4 +11,4 @@ run apt-get install -y -qq \
     qt5dxcb-plugin qt5ct python3-qtpy pyqt5-dev \
     zlib1g-dev 
     
-run pip3 install twisted opencv-python-headless opencv-contrib-python
+run pip3 install twisted opencv-python-headless opencv-contrib-python mediapipe tensorflow keras
