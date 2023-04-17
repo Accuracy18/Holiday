@@ -1,7 +1,7 @@
 services:
     main_brainz:
-        build: ./hand_control/
-        image: main_brainz:latest
+        #build: ./hand_control/
+        image: gtdonny18/main_brainz:latest
         container_name: main_brainz_container
         
         tty: true
@@ -21,11 +21,9 @@ services:
         #    that_network:
         #        ipv4_address: 192.168.20.2
 
-        network_mode: host   
+        network_mode: host
         working_dir: /root/hand_control
 
-    
-        
 networks:
     that_network:
         ipam:
